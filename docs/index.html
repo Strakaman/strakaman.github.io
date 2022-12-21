@@ -4,90 +4,11 @@
     <title>Bouken da Bouken!</title>
 </head>
 <body>
-<p id="GenshinPulls"></p>
+<p id="demo"></p>
 
 <script>
-//document.querySelector('#header').innerHTML = ""
-var cSM = ["Lame.", "Boooo!", "Well that sucks...","Bruh..."]
-var dSM = ["Nice!", "Pretty cool!","Sweet!"]
-var eSM = ["Max vibes!", "Super lucky!", "What the hell!?", "WHOA!"]
 
-var prefixList
-var pullRank
-var charList
-var punct = "! "
-
-var threeStars= [
-  ["Debate Club", ""],
-  ["Thrilling Tales", ""],
-  ["Black Tassel",""],
-  ["Cool Steel",""],
-  ["Slingshot",""]
-]
-
-var fourStars = [
-  ["Bennett", "Teamwork is dreamwork!"],
-  ["Fischl", "Oz, reveal thyself!"],
-
-  ["Kaeya", "Don't get frostbite!"]
- ]
-var fiveStars = [
-  ["Albedo", "Witness my great undertaking!"],
-  ["Ayaka", "Kamisato Art: Sometsu!"],
-
-  ["Ayato", "Pace yourself before you erase yourself!"],
-    ["Diluc", "Time for retribution!"],
-
-    ["Ganyu", "Born of ice and frost!"],
-	  ["Hutao", "Pyre, pyre, pants on fire!"],
-
-["Keqing", "Cut to the chase!"],
-  ["Nahida", "Share in my knowledge"],
-    ["Raiden Shogun", "Inazuma shines eternal!"],
-
-  ["Tighnari", "Let's nip that in the bud!"],
-
-  ["Venti", "Wouldn't gliding be faster?"],
-  ["Zhongli", "I will have order!"]
-
-]
-
-
-console.log(threeStars)
-console.log(fourStars)
-console.log(fiveStars)
-console.log("")
-pull()
-
-function pull()
-{
-  result = Math.floor(Math.random() * 100)
-  console.log("Result Number: " + result + "\n")
-  if (result < 50) {
-	  prefixList = cSM
-	  pullRank = 3
-	  charList = threeStars
-	  punct = ". "
-  }
-  else if (result < 90)
-  {
-	  prefixList = dSM
-	  pullRank = 4
-	  charList = fourStars
-	  }
-  else
-  {
-	  prefixList = eSM
-	  pullRank = 5
-	  charList = fiveStars
-  }
-  sayLine()
-}
-
-function sayLine()
-{
-	document.getElementById("GenshinPulls").innerHTML = prefixList[0] + " You pulled a " + pullRank + "* " +	charList[0][0] + punct + charList[0][1];
-}
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
 </script> 
 
 </body>
